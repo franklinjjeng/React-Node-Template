@@ -1,4 +1,4 @@
-##React Node Template
+#React Node Template
 
 # to use
 - navigate to root in terminal
