@@ -1,16 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+// Components
+import Navbar from './components/navigation/NavBar.js';
+import Main from './components/Main.js';
 
 export default class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <h1>Hello World</h1>
+      <BrowserRouter>
+        <div>
+          <Navbar className="navbar" props={this.props} />
+          <Main />
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
